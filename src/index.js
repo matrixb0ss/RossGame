@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { ButtonToolbar, MenuItem, DropdownButton } from 'react-bootstrap';
+import { ButtonToolbar } from 'react-bootstrap';
 
 
 const PlayButton = (props) => {
@@ -38,7 +38,7 @@ const ColorButtons = (props) => {
 }
 
 const Grid = (props) => {
-  const { fullfilledGrid, selectBox } = props;
+  const { fullfilledGrid } = props;
   const cols = 6;
   const rows = 6;
 
@@ -63,7 +63,6 @@ const Grid = (props) => {
           boxId={boxId}
           row={i}
           col={j}
-          selectBox={selectBox}
         />
       );
     }
@@ -77,17 +76,18 @@ const Grid = (props) => {
 }
 
 const Box = (props) => {
-  const { boxClass, id, row, col } = props;
+  const { boxClass, id } = props;
 
   return (
     <div
       className={boxClass}
       id={id}
-      onClick={() => props.selectBox(row, col)}/>
+      onClick={() => console.log('click')}
+    />
   );
 }
 
-class Main extends React.Component {
+export class Main extends React.Component {
   constructor() {
     super();
     this.rows = 6;
@@ -134,7 +134,6 @@ class Main extends React.Component {
         />
         <Grid
           fullfilledGrid={fullfilledGrid}
-          selectBox={this.selectBox}
         />
 
         <h2>Steps: {steps}</h2>
