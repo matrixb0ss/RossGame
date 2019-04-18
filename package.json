@@ -1,11 +1,11 @@
 {
-  "name": "gameof",
+  "name": "game",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "react": "^16.8.6",
-    "react-bootstrap": "^0.31.5",
-    "react-dom": "^16.1.1",
+    "react-bootstrap": "^1.0.0-beta.8",
+    "react-dom": "^16.8.6",
     "react-scripts": "1.0.17"
   },
   "scripts": {

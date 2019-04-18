@@ -22,13 +22,13 @@ const ColorButtons = (props) => {
     <div>
       <div className='center'>
         <ButtonToolbar>
-          <button className='btn btn-default' onClick={() => console.log('blue')}>
+          <button className='btn btn-info' onClick={() => console.log('blue')}>
             Blue
           </button>
-          <button className='btn btn-default' onClick={() => console.log('red')}>
+          <button className='btn btn-danger' onClick={() => console.log('red')}>
             Red
           </button>
-          <button className='btn btn-default' onClick={() => console.log('yellow')}>
+          <button className='btn btn-success' onClick={() => console.log('yellow')}>
             Yellow
           </button>
         </ButtonToolbar>
